@@ -24,7 +24,7 @@ def add_memory(content:str) -> None:
     """
     try:
         memory.add(
-            messages=content,
+            messages = content,
             user_id = USER_ID
         )
     
@@ -49,7 +49,7 @@ def fetch_memory(query:str) -> list:
     """
     try:
         results = memory.search(
-            query=query,
+            query = query,
             filters = {"user_id": USER_ID},
             limit = 5
         )
