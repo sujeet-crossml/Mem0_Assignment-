@@ -21,10 +21,16 @@ def add_memory(content:str|list|dict) -> None:
 # function for the fetching message from the memory
 def fetch_memory(query:str) -> dict:
     try:
-        result = memory.search(
+        results = memory.search(
             query=query,
-            filters = {"user_id": "USER_ID"},
+            filters = {"user_id": USER_ID},
             limit = 5
         )
+        if not results:
+            return "No relevant memory found."
+        
+        memories = [item["memory"] for item in results["results"]]
+        return "\n".join(memories)
+    
     except Exception as e:
         raise f"Mem0 fetch_memory error:{e}"

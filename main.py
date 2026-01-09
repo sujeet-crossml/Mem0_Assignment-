@@ -13,9 +13,9 @@ if __name__ == "__main__":
     logger.info("🚀 Logging initialized successfully")
 
     add_memory("User prefers DD-MM-YYYY date format for any queries.")
-    add_memory("User prefers solving equations with step by step and also likes explanation for every step.")
+    add_memory("User name is sujeet")
     add_memory("User is located in Chandigarh.")
-    add_memory("User prefer text sentiment answer in one line with small reasons.")
+    add_memory("I love to play cricket, badminton and vollyball.")
     
     # Invoking the agent for the response of content for real api tool
     while True:
@@ -41,6 +41,6 @@ if __name__ == "__main__":
         
         elif user_input == "q":
             break
-        
+
         else:
             print("Enter a valid input(either s or q )")
