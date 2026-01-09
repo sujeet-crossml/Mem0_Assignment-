@@ -15,7 +15,7 @@ from prompts import system_prompt
 
 # defining chat model for gemini with api key config
 llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash-lite",
+    model="gemini-2.5-flash",
     google_api_key=gemini_api_key,
     temperature=0
 )

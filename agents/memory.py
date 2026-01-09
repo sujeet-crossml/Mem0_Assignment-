@@ -8,7 +8,20 @@ memory = MemoryClient(
 )
 
 # function for the adding message to the memory
-def add_memory(content:str|list|dict) -> None:
+def add_memory(content:str) -> None:
+    """
+    Summary:
+        Store content in persistent memory for the current user.
+
+    Args:
+        content (str): Text content to be added to memory.
+
+    Returns:
+        None: This function does not return a value.
+
+    Raises:
+        Exception: If storing content in memory fails.
+    """
     try:
         memory.add(
             messages=content,
@@ -19,7 +32,21 @@ def add_memory(content:str|list|dict) -> None:
         raise f"Mem0 add_memory error:{e}"
 
 # function for the fetching message from the memory
-def fetch_memory(query:str) -> dict:
+def fetch_memory(query:str) -> list:
+    """
+    Summary:
+        Retrieve relevant stored memories based on a search query.
+
+    Args:
+        query (str): Search query used to find related memories.
+
+    Returns:
+        list | str: Joined memory text if found, or a message indicating
+        no relevant memory is available.
+
+    Raises:
+        Exception: If fetching memory from storage fails.
+    """
     try:
         results = memory.search(
             query=query,
