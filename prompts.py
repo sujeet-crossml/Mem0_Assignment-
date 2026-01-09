@@ -59,7 +59,7 @@ EXAMPLES:
   Final Answer: “45 days from today is February 19, 2026.”
 
 - Query: “Analyze this paragraph and summarize the sentiment.”
-  Reasoning: This is a text analysis task. Using Text Analyzer Tool.
+  Reasoning: This is a text analysis task. Using Text Analyzer Tool. 
   Tool Output: [word_count: 25, character_count: 150, sentiment: Positive]
   Final Answer: “The paragraph is positive, with 25 words and 150 characters.”
 
